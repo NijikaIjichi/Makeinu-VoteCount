@@ -32,6 +32,8 @@ MAX       = 1
 # 每组最多投票人数，一般来说海选赛填10，复活赛填8，淘汰赛填1
 ```
 
+如果你因为使用次数频繁而被度娘ban了，可以考虑加上`BDUSS`并填在第12行，`BDUSS`获取方法请参见 https://aiotieba.cc/tutorial/start/#bduss
+
 ### `lst.txt`
 
 请在此文件里放置参数选手名单

@@ -9,6 +9,8 @@ MAX       = 1
 FILE      = 'lst.txt'
 SLEEP     = 0.01
 
+BDUSS     = None
+
 PATTERN   = "(?<=\[)+[^\[\]]+?(?=[\[\]<])"
 FLAG      = re.I | re.M
 
@@ -50,7 +52,7 @@ def analyse_votes():
 
 async def get_votes():
   pn, last = 1, -1
-  async with aiotieba.Client() as client:
+  async with aiotieba.Client(BDUSS) as client:
     while True:
       posts = await client.get_posts(TID, pn=pn, comment_rn=0)
       if not posts or last == posts[0].floor:
